@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roman'S Abogados</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""> 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" >
+    <link rel="icon" type="image/vnd.icon" href="../assets/images/favicon.ico">
+    
+</head>
+<body>
+    <header id="Inicio">
+        <nav class="menu">
+            <div class="logo">
+                <h1><a><b>ABOGADOS PENALISTAS</b></a></h1>
+                <!--este codigo es para poner la barrita del menu hamburguesa-->
+                <span class="btn-menu"><i class="fas fa-bars"></i></span> 
+            
+            </div>
+            <div class="lista-content">
+                <ul class="lista">
+                    <li><a href="../index.html" >Inicio</a></li>
+                    <li><a href="./Galeria.html" >Galeria</a></li>
+                    <li><a href="./Presupuesto.html">Presupuesto</a></li>
+                    <li><a href="#Contacto.html" class=activo>Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div>
+            <div class="bienvenido">
+                <h2>ROMAN'S ABOGADOS</h2>
+                <P>Derecho Penal y Extradiciones</P>
+                
+            </div>
+
+        </div>
+        
+    
+    </header>
+    <main class="mapa">
+        <div id="map"></div>
+    </main>
+
+    <footer class="footer" id="Contacto">
+        <div class="bisel-arriba"></div>
+        <div class="degr-formu"></div>
+        <div class="ejez">
+            <div class="f-container">
+                
+                <div class="footer-text">
+                    <p>&copy; Roman'S - 2024 | Todos los derechos reservados </p><br>
+                    
+                    <div>
+                    <p> telefono:649653423 | Calle Quiñones 7 | abogados@gmail.com</p>
+                    </div>
+                </div>
+            
+                <div class="redes">
+                    <a href="https://es-es.facebook.com/">
+                        <img src="../assets/images/face.jpeg" alt="facebook" width="142" height="127">
+                    </a>
+                    <a href="https://www.instagram.com/">
+                        <img src="../assets/images/insta.png" alt="instagram" width="225" height="225">
+                    </a>    
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <script src="../script/mapa.js"></script>
+    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js" ></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roman'S Abogados</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/vnd.icon" href="../assets/images/favicon.ico">
+</head>
+<body>
+    <header id="Inicio">
+        <nav class="menu">
+            <div class="logo">
+                <h1><a><b>ABOGADOS PENALISTAS</b></a></h1>
+                <!--este codigo es para poner la barrita del menu hamburguesa-->
+                <span class="btn-menu"><i class="fas fa-bars"></i></span> 
+            
+            </div>
+            <div class="lista-content">
+                <ul class="lista">
+                    <li><a href="../index.html" >Inicio</a></li>
+                    <li><a href="./Galeria.html" >Galeria</a></li>
+                    <li><a href="#Presupuesto" class="activo">Presupuesto</a></li>
+                    <li><a href="./Contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        
+    
+    </header>
+    
+    <main class="footer" id="Contacto">
+        <div class="bisel-arriba"></div>
+        <div class="degr-formu"></div>
+        <div class="ejez">
+            <div class="f-container">
+                <div class="f-title">
+                    <h2>formulario de contacto</h2>
+                    <hr>
+                </div>
+                <div class="formulario">
+                    <form id="formulario" name="formulario" method="post">
+                        
+                        <label ><b>DATOS</b></label><hr><br><br>
+
+
+                    <div>
+                        <label for="Nombre">Nombre</label>
+                        <input type="text" id="Nombre" name="Nombre" placeholder="Escribe tu Nombre"><br><br>
+                        <small>Error mensaje</small>
+                    </div>
+
+                    <div>
+                        <label for="apellido">Apellido</label>
+                        <input type="text" id="apellido" name="Apellido" placeholder="Escribe tu Apellido"><br><br>
+                        <small>Error mensaje</small>
+                    </div>
+
+                    <div>                       
+                        <label for="telefono">Teléfono</label>
+                        <input type="text" id="telefono" name="Telefono" placeholder="Escribe tu Teléfono"><br><br>
+                        <small>Error mensaje</small>
+                    </div>
+                    <div>
+                        <label for="correo">Correo</label>
+                        <input type="text" id="correo" name="Correo" placeholder="Escribe tu correo electrónico"><br><br>
+                        <small>Error mensaje</small>
+                    </div>
+                        <br><br>
+
+                        <label ><b>PRESUPUESTO</b></label><hr> <br><br>
+                    <div>
+                        <label>Elija un producto</label>
+                        <select name="temas"  id="temas" >
+                            <option value="50">PENAL</option>
+                            <option value="70">CIVIL</option>
+                            <option value="90">EXTRANJERIA</option>
+
+                        </select>
+                        <br><br>
+                    </div>
+                    
+                    
+                    <div class="plazo">
+                        <label for="plazo" >Elija un plazo</label>
+                        <input type="number" id="plazo"  name="plazo" placeholder="Plazo en meses" min="1" max="3"><br><br>
+                        <small>Error mensaje</small>
+                    </div>
+                    
+                    <label >Elija los extras de su petición</label>
+                    <div id="check">
+                       
+                        <label for="check1" >Asesoramiento </label>
+                        <input type="checkbox" value="50" id="check1">
+                        <label for="check2" >Extradición</label>
+                        <input type="checkbox" value="70" id="check2"><br>
+                        <label for="check3" >Familiar</label><br>
+                        <input type="checkbox" value="90" id="check3">
+                    </div><br><br>
+
+                    <div >
+                        <label for="presupuesto">Presupuesto</label>
+                        <input type="text" id="presupuesto" name="presupuesto" placeholder="Presupuesto estimado">
+                        
+                    </div><br><br>
+
+                    <label><b>Aceptación de condiciones y envío de formulario</b></label><hr><br><br>
+                    <div class="politica">
+                        <label for="privacidad">He leído la política de privacidad</label>
+                        <input type="checkbox" id="privacidad" required><br>
+                        <small>Error mensaje</small>
+                    </div>
+                 
+
+                        
+                        
+                        <button class="enviar" id="enviar">Enviar</button>
+                        <p>Estaremos encantados de atender sus consultas </p>
+                    </form>
+                </div>
+                <div class="footer-text">
+                    <p>&copy; Roman'S - 2024 | Todos los derechos reservados</p>
+                </div>
+                <div class="redes" style="bottom:5px; height: 10px; ;">
+                    <a href="https://es-es.facebook.com/">
+                        <img src="../assets/images/face.jpeg" alt="facebook" width="142" height="127">
+                    </a>
+                    <a href="https://www.instagram.com/">
+                        <img src="../assets/images/insta.png" alt="instagram" width="225" height="225">
+                    </a>    
+                </div>
+            </div>
+        </div>
+        
+    </main>    
+    <script src="../script/javascript.js"></script>
+</body>
+</html>

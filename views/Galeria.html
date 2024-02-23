@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roman'S Abogados</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/vnd.icon" href="../assets/images/favicon.ico">
+</head>
+<body>
+    
+        <header id="Inicio">
+            <nav class="menu">
+                <div class="logo">
+                    <h1><a><b>ABOGADOS PENALISTAS</b></a></h1>
+                    <!--este codigo es para poner la barrita del menu hamburguesa-->
+                    <span class="btn-menu"><i class="fas fa-bars"></i></span> 
+                
+                </div>
+                <div class="lista-content">
+                    <ul class="lista">
+                        <li><a href="../index.html" >Inicio</a></li>
+                        <li><a href="#Galeria" class="activo">Galeria</a></li>
+                        <li><a href="./Presupuesto.html">Presupuesto</a></li>
+                        <li><a href="./Contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="img-header">
+                <div class="bienvenido">
+                    <h2>ROMAN'S ABOGADOS</h2>
+                    <P>Derecho Penal y Extradiciones</P>
+                    
+                </div>
+
+            </div>
+            
+        
+        </header>
+
+        <main class="fotos">
+            <div class="content">
+                <div class="images">
+                    <img class="slider" src="../assets/images/img1.jpg" alt="tribunal" width="4608" height="3072">
+                    <img class="slider" src="../assets/images/img2.jpg" alt="maletin" width="6720" height="4480">
+                    <img class="slider" src="../assets/images/img3.jpg" alt="Abogados" width="6720" height="4480">
+                    <img class="slider" src="../assets/images/img6.jpg" alt="despacho" width="4016" height="6016">
+                    <img class="slider" src="../assets/images/img7.jpg" alt="figura" width="6016" height="4016">
+                    <img class="slider" src="../assets/images/img9.jpg" alt="foto" width="3000" height="2000">
+                    <img class="slider" src="../assets/images/img10.jpg" alt="foto2" width="6000" height="4000">
+                </div>
+            
+
+                <div class="btm-slides"> 
+                    <span class="btn"  id="btn-1"></span>
+                    <span class="btn"  id="btn-2"></span>
+                    <span class="btn" id="btn-3"></span>
+                    <span class="btn" id="btn-4"></span>
+                    <span class="btn" id="btn-5"></span>
+                    <span class="btn" id="btn-6"></span>
+                    <span class="btn" id="btn-7"></span>
+                
+                </div>
+            </div>    
+        </main>
+
+        <footer class="footer" id="Contacto">
+            <div class="bisel-arriba"></div>
+            <div class="degr-formu"></div>
+            <div class="ejez">
+                <div class="f-container">
+                    
+                    <div class="footer-text">
+                        <p>&copy; Roman'S - 2024 | Todos los derechos reservados</p>
+                    </div>
+                
+                    <div class="redes">
+                        <a href="https://es-es.facebook.com/">
+                            <img src="../assets/images/face.jpeg" alt="facebook" width="142" height="127">
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <img src="../assets/images/insta.png" alt="instagram" width="225" height="225">
+                        </a>    
+                    </div>
+                </div>
+            </div>
+    
+        </footer>
+
+    <script>
+            /**************Slider GALERIA******************/
+        var indexValue = 1;
+        showImg(indexValue); 
+
+        let array = document.querySelectorAll(".btn");// no se pude hacer un evento debido a que es un array , entonces hacemos un bucle
+
+            array.forEach((item,index)=>{//recorremos el array que seria cada boton con el bucle forEach, con el parametro item te devuelve cada valor, osea cada boton
+            item.addEventListener("click",(e)=>{ //como el item ahora es cada boton le hacemos ahora si el evento addEventListner.
+                /*console.log(e.target.id.substr(-1));*///esto es para cuando pulsemos en el boton que sea nos pase el numero de boton que estamos pulsando
+            showImg(indexValue = parseInt( e.target.id.substr(-1)))//aqui index.value valdra el numero de boton que estemos pulsando para que nos pase la foto correspondiente a ese boton
+
+                })
+            })
+
+
+        function showImg(){
+
+            setTimeout(showImg,2000)
+            var i ;
+            const img = document.querySelectorAll(".slider");
+            const slider = document.querySelectorAll(".btm-slides span");
+            
+            
+        
+            for(i=0; i < img.length; i++){ //con este bucle cogemos de una en una foto y la ocualtamos con el display "none"
+                img[i].style.display = "none"; // img es un array
+            }
+            for(i=0; i < slider.length; i++){
+
+                slider[i].style.background = "rgba(255,255,255,0.1)";
+            }
+            
+            img[indexValue -1].style.display = "block"; //ponemos  index value -1 porque como es un array tiene que empezar en la posicion 0 no en la 1 porque la 1 seria la posicion 2
+            
+            slider[indexValue -1].style.background = "white";
+
+            indexValue++;
+            if(indexValue>img.length){indexValue=1}
+            
+        }
+
+    </script>
+
+    <script src="../script/javascript.js"></script>
+</body>
+</html>

@@ -1,0 +1,843 @@
+:root{/* esta etiqueta es como la de html.
+    aqui hemos creado unas variables de colores y de text*/
+    --blue:#143c54;
+    --black:#252a34;
+    --bluelight:#15a4bc;
+    --white:#eaeaea;
+    --title:35px;
+    --text:19px;text-decoration: none;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;/*este es un scroll que hace que baje con suavidad*/
+
+}
+body{
+    font-family: 'Red Hat Text',sans-serif;
+    background-color: #fff;
+    overflow-x: hidden;/*Sirve para quitar el scroll horizontal*/
+}
+img{
+    width: 1000px;
+}
+/*BISELES*/
+.bisel-abajo{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-width: 0 0 10vh 100vw;
+    border-color: transparent transparent #fff transparent;
+    border-style: solid;
+}
+.bisel-arriba{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-width: 10vh 100vw 0 0;
+    border-color: #fff  transparent transparent transparent;
+    border-style: solid;
+    z-index: 10;
+}
+
+/* menu de navegacion */
+#Inicio{
+    position: relative;
+    width: 100%;
+}
+.menu{
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100px;
+    background-color: #ffff;
+    display:flex;                   /* el flex es una forma de maquetar la pagina indicando como queremos que se coloquen las cajas
+    y el space-between hace que lo que esta dentro de menu se separen*/
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+}
+.menu .logo{
+    margin-left: 20px;
+    /*aqui hemos desplazado el style for men para la derecha */
+
+}
+.menu .logo h1 a{
+    /*aqui hemos decorado el style for men*/
+    text-decoration: none;
+    font-size: var(--title);
+    font-weight: 400;
+    color: var(--black);
+}
+.menu .lista-content{
+    margin-right: 20px;
+
+}
+.menu .lista-content ul{
+    display: flex;
+    
+}
+.menu .lista-content ul li{
+    list-style: none;
+    /* esto elimina los puntos de la lista*/
+}
+.menu .lista-content ul li a{
+    text-decoration: none; /* para poder quitar el subrayado tienes que poner esto a 
+                           la ultima etiqueta osea a la "a"*/ 
+    margin: 0px 10px;
+    padding: 8px;
+    color: var(--black);
+    font-size: 16px;
+    border-radius: 24px;
+    transition: 0.3s;
+
+}
+.menu .lista-content ul li a:hover{
+    background-color: var(--blue);
+    color: #fff;
+}
+.menu .lista-content ul li a.activo{/* la clase activo que hemos creado ha sido para que cuando estetmos en inicio se coloree en el boton de inicio para saber que estamos ahi*/
+    background-color: var(--blue);
+    color: #fff;
+}
+/********SLIDER***********/
+.fotos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.content{
+    height: 600px;
+    width: 1000px;
+    position: relative;
+
+}
+
+.content .images{
+    height: 100%;
+    width: 100%;
+    
+}
+
+.content .images img{
+    width: 100%;
+    height: 100%;
+}
+
+.fotos .btm-slides{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    display: flex;
+    transform: translateX(-50%);
+}
+
+.btm-slides span{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin: 0 3px ;
+    cursor: pointer;
+}
+
+
+
+/* imagen de header */
+
+
+.img-header{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../assets/images/img4.jpg); /* para poner una imagen de fondo desde estilos tiene que seguir est ruta*/
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.img-header .bienvenido{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.img-header .bienvenido h2{
+    font-size: 50px;
+    color: #fff;
+    font-weight: 200;
+}
+.img-header .bienvenido p{
+    font-size: 20px;
+    color: #fff;
+    margin-top: 20px;
+
+}
+.img-header .bienvenido > button{ /* se pone el signo de mayor para que nos aseguremos que estamos modificando 
+                                    ese boton que esta en bienvenidos*/
+    width: 170px;
+    height: 40px;
+    background-color: var(--blue);
+    border-radius: 24px;
+    color: #fff;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    text-align: center;
+    font-size: 20px;
+}
+.img-header .bienvenido > button:hover{
+    background-color: var(--bluelight);
+}
+/***** Nosotros *****/
+.Nosotros{
+    width: 100%;
+    margin-top: 120px;
+}
+#caja{
+    width: 900px; 
+    height: 400px;
+    margin-left: auto;
+    margin-right: 100px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 40px;
+    color: var(--black);
+}
+.n-container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.n-container h2{
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--black);
+    margin-top: 20px;
+    text-align: center;
+}
+.Nosotros .n-container p{
+    text-align: center;
+    font-size: 1rem;
+    color: var(--black);
+    line-height: 35px;/*con esto conseguimos el interlineado (espacio entre lineas de texto)*/
+    margin: 10px 0;
+}
+ .Nosotros .n-container .n-galeria{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+.Nosotros .n-container .n-galeria img{
+    width: calc(33.33% - 10px);
+    height: 300px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.Nosotros .n-container .n-boton{
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    font-size: 1.2rem;
+    background-color: var(--blue);
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    margin: 10px auto;/*CON ESTO HEMOS CONSEGUIDO CENTRAR 
+    EL BOTON SIN TENER QUE HACER UNA CAJA*/
+}
+.Nosotros .n-container .n-boton:hover{
+    background-color: var(--bluelight);
+}
+
+/*** Proyectos ***/
+.Proyectos{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/images/img1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: 100px;
+    
+}
+.Proyectos .degr-back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0 ;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+}
+.Proyectos .ejez{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.Proyectos .p-container{
+    width: 90%;
+    margin: auto;
+    padding-top: 100px;
+
+}
+.Proyectos .p-container .p-title{
+    border: 2px solid white;
+    padding: 10px;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+.Proyectos .p-container .p-title h2{
+    font-size: 2rem;
+    color: #fff;
+}
+.Proyectos .p-container .p-title hr{
+    background-color: #fff;
+    width: 50%;
+    height: 3px;
+    margin: 10px auto;   
+}
+.Proyectos .p-container .p-galeria{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    padding-bottom: 100px;
+}
+.Proyectos .p-container .p-galeria img{
+    width: calc(30% - 10px);
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 300px;
+    object-fit: cover;
+}
+
+
+/******Testimonios*******/
+.Testimonios{
+    width: 100%;
+    margin-top: 100px;
+}
+.Testimonios .t-title{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+
+}
+.Testimonios .t-title h2{
+    font-size: 2rem;
+    color: var(--black);
+    margin-bottom: 10px;
+}
+.Testimonios .t-title hr{
+    width: 60%;
+    height: 3px;
+    margin: auto;
+    background-color: var(--black);
+
+}
+.Testimonios .t-container{
+    width: 90%;
+    margin: 80px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.Testimonios .t-container .card-testimonio{
+    width: 45%;
+    margin: 20px;
+
+}
+.Testimonios .t-container .card-testimonio .card-img{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.Testimonios .t-container .card-testimonio .card-img img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;/*esto se usa para que las imagenes deformadas se pongan bien*/
+    cursor: pointer;
+}
+.Testimonios .t-container .card-testimonio .t-text{
+    border: 2px solid var(--blue);
+    border-radius: 20px;
+    padding: 20px;
+    transition: 0.1s;
+
+}
+.Testimonios .t-container .card-testimonio .t-text h3{
+    font-size: 25px;
+    font-weight: 400;
+    color: var(--blue);
+    margin-top: 10px;
+    transition: 0.1s;
+    text-align: center;
+
+}
+.Testimonios .t-container .card-testimonio .t-text p{
+    font-size: 20px;
+    text-align: center;
+    line-height: 40px;
+    color: var(--black);
+}
+.Testimonios .t-container .card-testimonio .t-text:hover{
+    border: 2px solid var(--bluelight);
+}
+.Testimonios .t-container .card-testimonio .t-text h3:hover{
+    color:  var(--bluelight);
+    cursor: pointer;
+}
+
+
+
+/**********presupuesto footer***********/
+.footer{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/images/img8.jpg);
+    background-attachment: fixed;/*asi no se mueve la img del fondo*/
+    background-position: center;
+    background-size: cover;
+}
+.footer .degr-formu{
+    position: absolute;/*con esto conseguimos que esta capa
+     este por encima de la capa relativa y tenga  el mismo tamaño*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+
+}
+.footer .ejez{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.footer .f-container{
+    padding-top:100px ;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 100px;
+}
+.footer .ejez .f-container .f-title{
+    width: 50%;
+    margin: auto;
+    border: 2px solid white;
+    padding: 15px;
+}
+.footer .ejez .f-container .f-title h2{
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.footer .ejez .f-container .f-title hr{
+    height: 2px;
+    background-color: #fff;
+    width: 80%;
+    margin: auto;
+}
+.footer .ejez .f-container .formulario{
+    width: 70%;
+    height: 100rem;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 50px;
+    border: 1.5px solid var(--blue);
+    padding: 30px;
+}
+.footer .ejez .f-container .formulario #formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.footer .ejez .f-container .formulario #formulario label{
+    font-size: 20px;
+    text-align: center;
+    color: var(--black); 
+    margin: 30px 0px 10px 0;
+
+}
+.footer .ejez .f-container .formulario #formulario input{
+    width: 90%;
+    height: 40px;
+    margin: auto;
+    border-radius: 5px;
+   /*  border: 1.5px solid var(--blue); */
+    text-align: center;
+    font-size: 18px;
+    /* color: var(--black); */
+}
+
+
+.footer .ejez .f-container .formulario #formulario .enviar{
+    width: 120px;
+    height: 40px;
+    margin: 15px auto;
+    text-align: center;
+    background-color: #143c54;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+.footer .ejez .f-container .formulario #formulario .enviar:hover{
+    background-color: var(--bluelight);   
+}
+.footer .ejez .f-container .formulario #formulario p{
+    font-size: 20px;
+    color: var(--black);
+    line-height:35px ;
+    text-align: center;
+}
+.footer .ejez .f-container .footer-text{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background-color: rgba(0,0,0,0.8);
+    border-top: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .ejez .f-container .footer-text div{
+
+    margin: 10px 10px;
+}
+.footer .ejez .f-container .footer-text p{
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+}
+
+.footer .ejez .f-container .redes{
+    position:absolute;
+    bottom: 0;
+    margin-top: 50px;
+    display: flex;
+    height: 10%;
+    width: 84%;
+    justify-content:center;
+    align-items: center;
+    
+
+
+}
+.footer .ejez .f-container .redes img{
+    width: 20px;
+    height: 20px;
+    top: 100px;
+}
+
+
+#check {
+   width: 10%;  
+}
+
+#check #check1{
+    width: 20px;
+    height: 20px;  
+}
+#check #check2{
+    width: 20px;
+    height: 20px;  
+}
+
+#check #check3{
+    width: 20px;
+    height: 20px;  
+}
+.politica{
+    width: 40%;
+    height: 50%;
+    display: flex;
+}
+#formulario .politica #privacidad{
+    width: 20px;
+    height: 20px;
+}
+
+
+
+
+
+
+
+
+
+/********CONTACTO*************/
+
+ #map{
+    margin-top: 50px;
+    height:610px;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+
+
+/********************/
+
+
+.go-top{
+    position: fixed;
+    bottom: 100px;
+    right: -100px;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border: 2px solid var(--blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    transition: 0.5s;
+
+}
+.go-top > span{
+    font-size: 2rem;
+    color: var(--black);
+
+}
+.go-top:hover{
+    background-color: var(--blue);
+    color: #fff;
+    border: 2px solid var(--white);
+
+}
+.go-top:hover span{
+    color: var(--white);
+}
+ 
+/*******MEDIA QUERYS**********/
+
+@media only screen and (max-width:900px){
+    .btn-menu > .fa-bars{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 28px;
+        color: var(--blue);
+        cursor: pointer;
+        transition: 0.5s;
+
+    }
+    .btn-menu >.fa-times{
+        color: var(--blue);
+    }
+    .btn-menu > .fa-bars:hover{
+        color: var(--black);
+    }
+    .menu .logo{
+        margin-left: 30px;
+    }
+    .menu .lista-content{
+        position: fixed;
+        top: 60px;
+        left: -100%; /*Esto sirve para ocultar el menu*/
+        background: #fff;
+        width: 100%;
+        height: calc(100vh - 60px);
+    }
+    .menu .lista-content .lista{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-top: 4px solid var(--blue);
+    }
+    .menu .lista-content .lista li{
+        border-bottom: 2px solid var(--black);
+        width: 90%;
+        display: flex;
+        justify-content: center;
+
+    }
+    .menu .lista-content .lista li a{
+        padding: 12px 0;
+        font-size: 20px;
+    }
+    .menu .lista-content .lista li a.activo{
+        background: none;
+        color: var(--blue);
+        
+    }
+    .menu .lista-content .lista li a:hover{
+        background: none;
+        color: var(--blue);
+        
+    }
+
+}
+/*****************************************/
+
+@media only screen and (max-width:773px){
+    .img-header .bienvenido h2{
+        font-size: 40px;    
+    }
+    .img-header .bienvenido button{
+        width: 130px;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width:590px){
+    .img-header .bienvenido h2{
+        font-size: 30px;
+        
+    }
+    .img-header .bienvenido button{
+        width: 100px;
+        font-size: 17px;
+    }
+    .img-header .bienvenido p{
+        font-size:20px ;
+    }
+
+}
+/*******************************************/
+
+@media only screen and (max-width:773px){
+    .Nosotros .n-container .n-galeria{
+        flex-direction: column;
+    }
+    .Nosotros .n-container .n-galeria img{
+       width: 100%;
+    }
+}
+
+@media only screen and (max-width:590px){
+    .Nosotros .n-container h2{
+        font-size: 30px;
+    }
+    .Nosotros .n-container p{
+        font-size: 15px;
+    }
+}
+/*******************************************/
+
+@media only screen and (max-width:773px){
+   .Proyectos .p-container .p-galeria img{
+        width: 80%;
+        margin-bottom: 30px;
+   }
+}
+
+@media only screen and (max-width:590px){
+    .Proyectos .p-container h2{
+        font-size: 30px;
+    }
+}
+/*******************************************/
+
+@media only screen and (max-width:773px){
+    .Testimonios .t-container .card-testimonio .card-img img{
+        width: 200px;
+        height: 200px;
+    }
+    .Testimonios .t-container .card-testimonio{
+        width: 100%;
+    }
+    .Testimonios .t-container .card-testimonio p{
+        font-size: 17px;
+        line-height: 15px;
+    }
+
+}
+ 
+@media only screen and (max-width:900px){
+    .footer .ejez .f-container .formulario{
+        width: 85%;
+        padding: 20px;
+    }
+    .footer .ejez .f-container .formulario input{
+        width: 100%;  
+    }
+   
+}
+
+@media only screen and (max-width:590px){
+    .footer .ejez .f-container .formulario{
+        width: 90%;
+        padding: 20px;
+        
+    }
+    footer .ejez .f-container .formulario input{
+        width: 100%; 
+        font-size: 17px;  
+    }
+   
+    footer .ejez .f-container .formulario label{
+      font-size: 17px;   
+    }
+}
+
+
+small{
+    background-color: #e74d3c;
+    border-radius: .5rem;
+    padding: .5rem;
+    color: #fff;
+    bottom: 0px;
+    left: 0px;
+    visibility: hidden;
+}
+
+.form-control.success input{
+
+    border-color: green ;
+}
+.form-control.error{
+    padding: 10px;
+    position: relative;
+
+   
+    
+}
+
+.form-control.error input{
+
+    border-color: #e44d3c ;
+}
+
+.form-control.error small{
+
+    visibility: visible ;
+}
